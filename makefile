@@ -22,13 +22,13 @@ CFLAGS = -Wall -Wextra -pedantic
 
 #DECLARATION DES REGLES
 
-activite.o: activite.h piles.h plateau.h coordonnees.h
-coordonnees.o: coordonnees.h piles.h plateau.h
-joueurs.o: joueurs.h
-piles.o: piles.h
-plateau.o: piles.h plateau.h
-points.o: points.h plateau.h piles.h
-main.o: *.h
+activite.o: headers/activite.h headers/piles.h headers/plateau.h headers/coordonnees.h
+coordonnees.o: headers/coordonnees.h headers/piles.h headers/plateau.h
+joueurs.o: headers/joueurs.h
+piles.o: headers/piles.h
+plateau.o: headers/piles.h headers/plateau.h
+points.o: headers/points.h headers/plateau.h headers/piles.h
+main.o: headers/*.h
 
 projet: $(OFILES)
 	$(CC) $(CFLAGS) $(OFILES) -o $(NAME)
