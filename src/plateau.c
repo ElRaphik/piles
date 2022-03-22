@@ -58,12 +58,12 @@ void destroy_plateau(Plateau *plateau){
     @assigns none
     @ensures envoie sur le stdout une representation du plateau comprehensible par les joueurs*/
 void print_plateau(Plateau plateau){
-    printf("\n |");
+    printf("\n |%s", plateau.taille > 9 ? " " : "");
     for(int i=1;i<=plateau.taille;i++){
         printf("%d ",i);
     }
     printf("\n-+");
-    for(int i=0;i<(2*plateau.taille + plateau.taille / 2);i++) printf("-");
+    for(int i=0;i<(2*plateau.taille + plateau.taille / 2 + 1);i++) printf("-");
     printf("\n");
     for(int i=1;i<=plateau.taille;i++){
         printf("%s%d|", plateau.taille > 9 && i < 10 ? "0" : "", i);
