@@ -45,7 +45,7 @@ run_test:
 	./$(NAME) < $(TESTFILE)
 
 archive:
-	tar -czvf raphael.soranzo.tgz *.pdf *.c *.h $(TESTFILE) makefile
+	tar -czvf my_archive.tgz *.pdf *.c *.h $(TESTFILE) makefile
 
 .PHONY: but clean \
 	but run \
